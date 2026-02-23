@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devote — V1 MVP</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Devote</h1>
+      <p>Daily faith habit + short-form Christian videos</p>
+    </header>
+
+    <main id="app">
+      <section id="feed" class="tab active"></section>
+      <section id="explore" class="tab"></section>
+      <section id="create" class="tab"></section>
+      <section id="daily" class="tab"></section>
+      <section id="profile" class="tab"></section>
+    </main>
+
+    <nav class="bottom-nav" id="bottom-nav">
+      <button data-tab="feed" class="active">Feed</button>
+      <button data-tab="explore">Explore</button>
+      <button data-tab="create">Create</button>
+      <button data-tab="daily">Daily</button>
+      <button data-tab="profile">Profile</button>
+    </nav>
+
+    <dialog id="comment-dialog">
+      <form method="dialog" id="comment-form">
+        <h3>Comments</h3>
+        <div id="comment-list"></div>
+        <textarea id="comment-input" placeholder="Write an encouraging comment..." rows="3"></textarea>
+        <menu>
+          <button value="cancel">Close</button>
+          <button id="comment-submit" value="default">Post</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <dialog id="report-dialog">
+      <form method="dialog" id="report-form">
+        <h3>Report content</h3>
+        <select id="report-reason">
+          <option>Harassment</option>
+          <option>Hate speech</option>
+          <option>Spam</option>
+          <option>Explicit content</option>
+          <option>Other</option>
+        </select>
+        <menu>
+          <button value="cancel">Cancel</button>
+          <button id="report-submit" value="default">Submit report</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
